@@ -37,7 +37,7 @@ const Topbar = ({ onOpen, ...rest }) => {
       />
 
       <Link
-        href="/"
+        href="#"
         textAlign={"center"}
         display={{ base: "flex", md: "none" }}
       >

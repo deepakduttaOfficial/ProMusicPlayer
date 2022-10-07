@@ -1,6 +1,7 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import {
+  Box,
   Button,
   Divider,
   Menu,
@@ -17,10 +18,14 @@ const MobileController = () => {
       <MenuButton as={Button}>
         <BsThreeDotsVertical />
       </MenuButton>
-      <MenuList px={5} as={VStack} alignItems={"flex-start"}>
-        <SmMusic />
+      <MenuList as={VStack} alignItems={"flex-start"}>
+        <Box px={5} w={"full"}>
+          <SmMusic />
+        </Box>
         <Divider />
-        <Sound />
+        <Box px={5} w={"full"}>
+          <Sound />
+        </Box>
       </MenuList>
     </Menu>
   );

@@ -13,7 +13,7 @@ const Sound = () => {
   return (
     <HStack w={{ base: "full", md: 150 }}>
       <AiTwotoneSound size={30} />
-      <Slider aria-label="slider-ex-1" defaultValue={100}>
+      <Slider aria-label="slider-ex-1" defaultValue={50}>
         <SliderTrack bg={useColorModeValue("gray.400", "gray.600")}>
           <SliderFilledTrack bg={useColorModeValue("gray.600", "#fff")} />
         </SliderTrack>

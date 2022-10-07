@@ -1,38 +1,34 @@
-import { Flex, Icon, Link } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 const NavItem = ({ icon, link, children, ...rest }) => {
-  const itemBg = useColorModeValue("gray.400", "brand.100");
+  const itemBg = useColorModeValue("#A0AEC0", "#011e3c");
+  const activeStyle = {
+    backgroundColor: itemBg,
+    color: "#ffffff",
+    transform: "scale(1.04)",
+    transition: "0.5s",
+  };
   return (
-    <Link
-      href={link}
-      style={{ textDecoration: "none" }}
-      _focus={{ boxShadow: "none" }}
+    <Flex
+      as={NavLink}
+      to={link}
+      style={({ isActive }) => (isActive ? activeStyle : undefined)}
+      align="center"
+      p="4"
+      mx="4"
+      borderRadius="lg"
+      role="group"
+      cursor="pointer"
+      _hover={{
+        bg: itemBg,
+        color: "#ffffff",
+      }}
     >
-      <Flex
-        align="center"
-        p="4"
-        mx="4"
-        borderRadius="lg"
-        role="group"
-        cursor="pointer"
-        _hover={{
-          bg: itemBg,
-          color: "white",
-        }}
-        {...rest}
-      >
-        <Icon
-          mr="4"
-          fontSize="16"
-          _groupHover={{
-            color: "white",
-          }}
-          as={icon}
-        />
-        {children}
-      </Flex>
-    </Link>
+      <Icon mr="4" fontSize="16" as={icon} />
+      {children}
+    </Flex>
   );
 };
 

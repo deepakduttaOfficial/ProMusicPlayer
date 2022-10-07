@@ -30,19 +30,19 @@ const Sidebar = ({ onClose, ...rest }) => (
     className={"sidebar"}
   >
     <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-      <Link href="/" textAlign={"center"}>
+      <Link href="#" textAlign={"center"}>
         <Image src={Logo} alt="Brand Logo" borderRadius="full" boxSize="40px" />
       </Link>
       <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
     </Flex>
-    <NavItem icon={FiHome} link="/">
+    <NavItem icon={FiHome} link="/music">
       Home
     </NavItem>
     <Searchbar />
-    <NavItem icon={MdFavoriteBorder} link="/">
+    <NavItem icon={MdFavoriteBorder} link="/fav">
       Favourites songs
     </NavItem>
-    <NavItem icon={RiPlayListAddLine} link="/">
+    <NavItem icon={RiPlayListAddLine} link="/create/playlist">
       Create Playlist
     </NavItem>
     <Divider my={5} />
