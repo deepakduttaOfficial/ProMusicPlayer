@@ -2,8 +2,9 @@ import React from "react";
 import { Box, Drawer, DrawerContent, useDisclosure } from "@chakra-ui/react";
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
+import MusicPlayer from "../music";
 
-const Navbar = ({ children }) => {
+const Wraper = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh">
@@ -28,8 +29,9 @@ const Navbar = ({ children }) => {
       <Box ml={{ base: 0, md: 60 }} p="4">
         {children}
       </Box>
+      <MusicPlayer />
     </Box>
   );
 };
 
-export default Navbar;
+export default Wraper;

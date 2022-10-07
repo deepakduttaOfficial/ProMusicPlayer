@@ -10,10 +10,8 @@ const NavItem = ({ icon, link, children, ...rest }) => {
       _focus={{ boxShadow: "none" }}
     >
       <Flex
-        mt={2}
         align="center"
-        px="4"
-        py="3"
+        p="4"
         mx="4"
         borderRadius="lg"
         role="group"

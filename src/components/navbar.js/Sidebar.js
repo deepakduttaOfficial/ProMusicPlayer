@@ -6,13 +6,15 @@ import {
   useColorModeValue,
   Link,
   Image,
+  Divider,
 } from "@chakra-ui/react";
 import { FiHome } from "react-icons/fi";
-import { BsSearch } from "react-icons/bs";
-import { AiOutlineLike } from "react-icons/ai";
 import { MdFavoriteBorder } from "react-icons/md";
+import { RiPlayListAddLine } from "react-icons/ri";
+
 import NavItem from "./NavItem";
 import Logo from "../../images/musicLogo.png";
+import Searchbar from "../search";
 
 const Sidebar = ({ onClose, ...rest }) => (
   <Box
@@ -24,6 +26,8 @@ const Sidebar = ({ onClose, ...rest }) => (
     pos="fixed"
     h="full"
     {...rest}
+    overflow={"scroll"}
+    className={"sidebar"}
   >
     <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
       <Link href="/" textAlign={"center"}>
@@ -34,15 +38,14 @@ const Sidebar = ({ onClose, ...rest }) => (
     <NavItem icon={FiHome} link="/">
       Home
     </NavItem>
-    <NavItem icon={BsSearch} link="/">
-      Search
-    </NavItem>
-    <NavItem icon={AiOutlineLike} link="/">
-      Like songs
-    </NavItem>
+    <Searchbar />
     <NavItem icon={MdFavoriteBorder} link="/">
       Favourites songs
     </NavItem>
+    <NavItem icon={RiPlayListAddLine} link="/">
+      Create Playlist
+    </NavItem>
+    <Divider my={5} />
   </Box>
 );
 

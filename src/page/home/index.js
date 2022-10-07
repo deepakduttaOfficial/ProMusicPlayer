@@ -1,12 +1,8 @@
 import React from "react";
-import Navbar from "../../components/navbar.js";
+import Wraper from "../../components/navbar.js";
 
 const Home = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <Wraper></Wraper>;
 };
 
 export default Home;
